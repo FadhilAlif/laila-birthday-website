@@ -504,6 +504,14 @@ export default function BirthdayWebsite() {
     };
   }, [showQuizConfetti]);
 
+  // State untuk tooltip music control
+  const [showMusicTooltip, setShowMusicTooltip] = useState(true);
+  useEffect(() => {
+    if (!showMusicTooltip) return;
+    const timer = setTimeout(() => setShowMusicTooltip(false), 5000);
+    return () => clearTimeout(timer);
+  }, [showMusicTooltip]);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
       {/* Background Music */}
@@ -512,14 +520,28 @@ export default function BirthdayWebsite() {
         Your browser does not support the audio element.
       </audio>
 
-      {/* Music Control Button */}
-      <button
-        onClick={musicPlaying ? toggleMusic : startMusic}
-        className="fixed top-4 right-4 z-50 bg-pink-500 hover:bg-pink-600 text-white p-2 md:p-3 rounded-full shadow-lg transition-all duration-300"
-        title={musicPlaying ? "Pause Music" : "Play Music"}
-      >
-        {musicPlaying ? "🔇" : "🎵"}
-      </button>
+      {/* Music Control Button + Tooltip */}
+      <div className="fixed top-4 right-4 z-50 flex items-center">
+        {/* Tooltip di kiri tombol */}
+        {showMusicTooltip && !musicPlaying && (
+          <div className="mr-3 bg-white/90 text-pink-600 border border-pink-200 rounded-lg px-3 py-2 shadow-lg text-sm font-semibold animate-fade-in-up animate-bounce-slow select-none whitespace-nowrap">
+            Klik di sini untuk menyalakan musik 🎵
+          </div>
+        )}
+        <button
+          onClick={(e) => {
+            if (!musicPlaying) startMusic();
+            else toggleMusic();
+            setShowMusicTooltip(false); // Hilangkan tooltip saat tombol diklik
+          }}
+          className={`bg-pink-500 hover:bg-pink-600 text-white p-2 md:p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none ${
+            showMusicTooltip && !musicPlaying ? "animate-pulse" : ""
+          }`}
+          title={musicPlaying ? "Pause Music" : "Play Music"}
+        >
+          {musicPlaying ? "🔇" : "🎵"}
+        </button>
+      </div>
 
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-2 md:px-0">
