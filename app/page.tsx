@@ -236,7 +236,7 @@ export default function BirthdayWebsite() {
       caption: "Lagi jamannya Museum date biar kaya orang orang",
     },
     {
-      src: "/assets/hindia_concert.jpg",
+      src: "/assets/crsl_concert.jpg",
       caption:
         "CRSL Concert 5 - Smoga hidup kita trus begini-gini saja, Walau sungai meluap dan kurs tak masuk logika, Smoga kita mencintai apa adanya - Cincin By Hindia",
     },
@@ -302,7 +302,7 @@ export default function BirthdayWebsite() {
     {
       id: 1,
       sender: "Ibu & Bapak",
-      photo: "/assets/wishes/ss.jpg",
+      photo: "/assets/wishes/ibu_bapak_letter.jpg",
     },
     {
       id: 2,
@@ -414,7 +414,7 @@ export default function BirthdayWebsite() {
     {
       id: 7,
       questionText:
-        "Semisal kita lomba lari dari kos kamu ke Kopi Soe, siapa yang menang?",
+        "Semisal kita lomba lari dari kos kamu dulu ke Kopi Soe, siapa yang menang?",
       options: [
         "Kamu, karena kamu cowo",
         "Aku, karena kamu takut aku marah kalo aku kalah",
@@ -960,7 +960,8 @@ export default function BirthdayWebsite() {
                         <img
                           src={wish.photo || "/placeholder.svg"}
                           alt={`Message from ${wish.sender}`}
-                          className="w-full h-38 md:h-44 object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform duration-200"
+                          // Batasi ukuran gambar di mobile agar tidak melebihi card
+                          className="max-h-32 w-auto mx-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform duration-200 md:max-h-44"
                           onClick={(e) => previewWishImage(wish.photo, e)}
                         />
                         {/* Icon mata di tengah gambar */}
