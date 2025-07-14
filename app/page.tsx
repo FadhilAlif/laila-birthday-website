@@ -375,8 +375,8 @@ export default function BirthdayWebsite() {
       options: [
         "Nasi Goreng Notaris",
         "Nasi Telor UGM",
-        "Nasi Teri Pojok",
         "Indomie Abang Abang",
+        "Nasi Teri Pojok",
       ],
       correctAnswer: "Nasi Teri Pojok",
     },
@@ -392,9 +392,9 @@ export default function BirthdayWebsite() {
       questionText:
         "Apa film Marvel terakhir yang kita tonton bareng di bioskop?",
       options: [
+        "Guardians of the Galaxy Vol. 3",
         "Spider-Man: No Way Home",
         "Doctor Strange 2",
-        "Guardians of the Galaxy Vol. 3",
         "Ant-Man and the Wasp: Quantumania",
       ],
       correctAnswer: "Guardians of the Galaxy Vol. 3",
@@ -405,8 +405,8 @@ export default function BirthdayWebsite() {
         "Kalau kita lagi marahan, siapa yang paling duluan minta maaf biasanya?",
       options: [
         "Aku (dengan gengsi 99%)",
-        "Kamu (karena gak tahan)",
         "Tiba-tiba udah baikan aja karena cape marah mulu",
+        "Kamu (karena gak tahan)",
         "Kita berdua diem-dieman sampe ketiduran",
       ],
       correctAnswer: "Tiba-tiba udah baikan aja karena cape marah mulu",
@@ -416,9 +416,9 @@ export default function BirthdayWebsite() {
       questionText:
         "Semisal kita lomba lari dari kos kamu dulu ke Kopi Soe, siapa yang menang?",
       options: [
+        "Gak ada yang menang, kita malah jajan bakso",
         "Kamu, karena kamu cowo",
         "Aku, karena kamu takut aku marah kalo aku kalah",
-        "Gak ada yang menang, kita malah jajan bakso",
         "Gamungkin lah, capek betul pasti",
       ],
       correctAnswer: "Gak ada yang menang, kita malah jajan bakso",
@@ -428,6 +428,23 @@ export default function BirthdayWebsite() {
       questionText: "Apa warna baju yang aku pakai pas first date sama kamu?",
       options: ["Hitam", "Hijau", "Biru", "Abu-abu"],
       correctAnswer: "Hijau",
+    },
+    {
+      id: 9,
+      questionText: "Kamu sayang sama aku ga, (mampus aku tanya balik)?",
+      options: [
+        "Sayang dong",
+        "Sayang aja",
+        "Sayang banget dong",
+        "Sayanggggggggggg bgttttttttttt",
+      ],
+      correctAnswer: "Sayanggggggggggg bgttttttttttt",
+    },
+    {
+      id: 10,
+      questionText: "Apasih makanan favorit akuu?",
+      options: ["Bakso", "Mie Ayam", "Nasi Goreng", "Yamie"],
+      correctAnswer: "Mie Ayam",
     },
   ];
 
@@ -736,31 +753,32 @@ export default function BirthdayWebsite() {
                   Di hari yang istimewa ini, aku ingin kamu tahu betapa
                   bersyukurnya aku punya kamu dalam hidupku. Setiap momen yang
                   kita lalui bersama adalah best moment of my life, dan setiap
-                  hari bersamamu terasa seperti mimpi yang indah dan selalu akan
-                  menjadi indah kaya lagu The Adams.
+                  hari bersamamu terasa seperti mimpi yang indah dan menjadi
+                  indah kaya lagu The Adams.
                 </p>
 
                 <p>
-                  Dari pertemuan pertama kita di tahun 2022 dari 2 Februari 2022
-                  hingga semua momen yang telah kita lalui bersama hingga detik
-                  ini, kamu telah membawa begitu banyak cinta, kasih,
-                  kegembiraan dan suka cita ke dalam duniaku. Senyummu menerangi
-                  hari-hari tergelapku, dan cintamu memberiku kekuatan buat
-                  melalui apapun itu dan mencoba apapun itu karena aku tau kalo
-                  aku belum berhasil dan aku jatuh kamu bakal selalu ada buat
-                  aku.
+                  Dari pertemuan pertama kita di tahun 2021, dan aku mulai
+                  berani chat kamu di 2 Februari 2022 hingga semua momen yang
+                  telah kita lalui bersama hingga detik ini, kamu telah membawa
+                  begitu banyak cinta, kasih, kegembiraan dan suka cita ke dalam
+                  duniaku. Senyum dan guraumu selalu menerangi hari-hariku, dan
+                  cintamu memberiku kekuatan buat melalui rintangan seberat
+                  apapun itu dan mencoba tanpa takut gagal karena aku tau kalo
+                  aku belum berhasil kamu bakal selalu ada buat support aku.
                 </p>
 
                 <p>
-                  Saat kita merayakan satu tahun lagi keberadaanmu yang indah,
-                  aku berjanji untuk terus menemanimu dan mencintaimu dengan
-                  sepenuh hati, mendukung semua mimpimu, dan menciptakan lebih
+                  Kita merayakan ulang tahunmu lagi, merayakan keberadaanmu yang
+                  indah, aku berjanji untuk terus menemanimu di setiap ulang
+                  tahun kamu kedepan dan mencintaimu dengan sepenuh hatiku,
+                  mendukung semua impian serta mimpimu, dan menciptakan lebih
                   banyak kenangan bersamamu.
                 </p>
 
                 <p>
                   You are my sunshine, my best friend, and my greatest love.
-                  Here's to many more birthdays together, my love 💕.
+                  Here's to many more birthdays together with you, my love 💕.
                 </p>
 
                 <p className="text-lg font-medium text-pink-600">
@@ -891,7 +909,8 @@ export default function BirthdayWebsite() {
 
             {!puzzleComplete && (
               <p className="text-center text-gray-500 mt-2 md:mt-4 text-xs md:text-sm">
-                💡 Tips: Seret dan jatuhkan potongan untuk mengatur ulang!
+                💡 Tips: Pilih bagian dan pindahkan ke tempat yang kamu
+                inginkan!
               </p>
             )}
           </div>
